@@ -1,0 +1,41 @@
+@charset "utf-8";
+html {
+
+}
+
+body {
+  font-family: "Oswald", "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* common */
+
+/*
+=====共通の汎用的なCSSを記述=====
+*/
+h1 {
+  font-size: 95px;
+  color: #f87841;
+}
+h2 {
+  font-size: 65px;
+  color: #f87841;
+}
+h3 {
+  font-size: 35px;
+}
+h4 {
+  font-size: 20px;
+}
+p {
+  font-size: 25px;
+}
+
+/* header */
+#header {
+}
+#main-name {
+  color: #00001C;
+}

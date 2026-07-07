@@ -37,8 +37,8 @@ h3 {
   color: #f87841;
   padding-left: 350px;
   letter-spacing: 5px;
-  border-top: 2px solid #f87841;
   /* border消す予定 */
+  border-top: 2px solid #f87841;
   border-bottom: 2px solid #f87841;
   padding-bottom: 5px;
 }
@@ -91,6 +91,7 @@ a {
   justify-content: space-around;
 }
 .main-img {
+  box-shadow: 10px 10px 0 #f87841;
   width: 800px;
   height: 550px;
   object-position: top;
@@ -121,6 +122,9 @@ a {
   color:rgb(56, 62, 69);
   padding-left: 10px;
   line-height: 40px;
+  border-top: 2px solid #f87841;
+  border-bottom: 2px solid #f87841;
+  padding-bottom: 5px;
 }
 
 /* works */
@@ -206,3 +210,13 @@ a {
 }
 
 /* gallery */
+.gallery {
+  background: #f87841;
+  padding-top: 20px;
+}
+.left-scroll {
+  margin: 5px;
+  padding-top: 20px;
+  height: 200px;
+  object-fit: cover;
+}

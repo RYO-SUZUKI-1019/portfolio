@@ -12,26 +12,26 @@
 </head>
 <body>
 <!-- ヘッダー -->
-  <header>
+  <header class="header">
     <h1 class="site-title">
-      <a href="index.html">
+      <a class="top-links" href="index.html">
         SUZUKI RYO
       </a>
     </h1>
   <nav class="site-links">
     <ul>
       <li>
-        <a class="works-link" href="#works">
+        <a class="header-works-link" href="#works">
           works
         </a>
       </li>
       <li>
-        <a class="profile-link" href="#profile">
+        <a class="header-profile-link" href="#profile">
           profile
         </a>
       </li>
       <li>
-        <a class="contact-link" href="contact.html">
+        <a class="header-contact-link" href="contact.html">
           contact
         </a>
       </li>
@@ -39,21 +39,23 @@
     </nav>
   </header>
 <!-- メインビジュアル -->
-  <main>
-    <div id="main-visual">
-      <img src="images/mainvisual.png" alt="メインビジュアル">
+  <main class="main">
+    <div class="main-contents">
+      <div class="main-visual">
+        <img class="main-img" src="images/mainvisual.png" alt="メインビジュアル">
+      </div>
+      <div class="main-title-text">
+        <h2 class="portfolio-title">
+          Portfolio
+        </h2>
+        <p class="main-name">
+          Ryo<br>Suzuki
+        </p>
+        <p class="main-actively">
+          Web designer<br>Markup engineer
+        </p>
+      </div>
     </div>
-  <section class="main-taitl">
-    <h2 class="portfolio-title">
-      Portfolio
-    </h2>
-    <p class="main-name">
-      Ryo<br>Suzuki
-    </p>
-    <p class="main-actively">
-      Web designer<br>Markup engineer
-    </p>
-  </section>
   <section class="works" id="works">
     <h3 class="main-works-title">
       Works
@@ -76,7 +78,7 @@
       </li>
       <li>
         <a href="">
-          <img class="content-phot-two" src="" alt="ポートフォリオ">
+          <img class="content-phot-two" src="images/testimg.png" alt="ポートフォリオ">
         </a>
         <h4 class="content-title-two">
           My Portfolio
@@ -103,9 +105,11 @@
         </p>
       </li>
     </ul>
-      <a class="works-link" href="works_all.html">
-        全て見る
-      </a>
+      <div class="works-link-external">
+        <a class="works-link" href="works_all.html">
+          全て見る
+        </a>
+      </div>
   </div>
   </section>
   <section class="about">
@@ -120,9 +124,11 @@
     <p class="profile-text">
       テキスト
     </p>
+  <div class="profile-link-external">
     <a class="profile-link" href="profile.html">
       全て見る
     </a>
+  </div>
   </div>
   <div class="gallery">
     <ul class="gallery-photo">

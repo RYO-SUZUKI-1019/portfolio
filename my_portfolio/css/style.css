@@ -1,4 +1,8 @@
 @charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+}
 html {
   font-size: 100px;
   scroll-behavior: smooth;
@@ -46,6 +50,13 @@ a {
 }
 .link-external {
   text-align: center;
+}
+small {
+  font-size: 20%;
+  color: #f0f0f0;
+  display: flex;
+  justify-content: right;
+  margin-right: 20px;
 }
 
 /* header */
@@ -98,7 +109,6 @@ a {
   height: 550px;
   object-position: top;
   object-fit: cover;
-  padding-top: 10px;
 }
 .main-title-text {
   padding-right: 60px;
@@ -254,7 +264,7 @@ a {
 
 /* gallery */
 .gallery {
-  background: #f87841;
+  background: linear-gradient(to right, #ff9f75, #f87841);
   padding-top: 20px;
 }
 .left-scroll {
@@ -264,11 +274,65 @@ a {
   object-fit: cover;
 }
 
-/* contact */
-.contact {
-  background: #f87841;
+/* footer */
+.footer {
+  background: linear-gradient(#f87841, #ff9f75);
   margin-top: 100px;
 }
 .contact-text, .contact-name{
   color: #ffff
 }
+.contact-name {
+  font-size: 30px;
+}
+.contact  a {
+  color: #000;
+  text-decoration: none;
+}
+.contact-flex {
+  display: flex;
+  flex-direction: column;
+}
+.contact-name, .contact-mail {
+  margin-left: 505px;
+}
+.contact-text {
+  margin-top: 100px;
+  margin-left: 150px;
+}
+.contact-mail {
+  background: #FFFF;
+  margin-top: 20px;
+  width: 235px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+}
+.contact-link {
+  margin-top: 50px;
+  margin-left: 500px;
+  position: relative;
+  border-top: dotted 3px #FFFF;
+  width: 50%;
+}
+.contact-link a {
+  position: relative;
+  top: -50px;
+}
+.contact-profile, .contact-works,.contact-x,.contact-instagram {
+  margin-left: 20px;
+}
+.x-icon {
+  width: 50px;
+  height: 50px;
+}
+.instagram-icon {
+  width: 50px;
+  height: 50px;
+}
+.contact-x, .contact-instagram {
+  margin-top: 5px
+}
+
+
+

@@ -67,7 +67,8 @@ small {
   padding: 10px;
   position: sticky;
   top: 0;
-  background-color: rgba(255, 255, 255, 0.7)
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 1900px;
 }
 .site-links {
   font-size: 25px;
@@ -143,7 +144,7 @@ small {
 /* works */
 .works {
   padding: 70px 0;
-
+  width: 1900px;
 }
 .main-works-title {
 }
@@ -282,7 +283,7 @@ small {
   margin-top: 100px;
 }
 .contact-text, .contact-name{
-  color: #ffff
+  color: #ffff;
 }
 .contact-name {
   font-size: 30px;
@@ -333,7 +334,7 @@ small {
   height: 50px;
 }
 .contact-x, .contact-instagram {
-  margin-top: 5px
+  margin-top: 5px;
 }
 /* index-homeここまで */
 

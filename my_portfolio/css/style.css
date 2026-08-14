@@ -59,6 +59,7 @@ small {
   margin-right: 20px;
 }
 
+/* index-home */
 /* header */
 .header {
   display: flex;
@@ -142,6 +143,7 @@ small {
 /* works */
 .works {
   padding: 70px 0;
+
 }
 .main-works-title {
 }
@@ -333,6 +335,65 @@ small {
 .contact-x, .contact-instagram {
   margin-top: 5px
 }
+/* index-homeここまで */
 
+/* contact */
+.contact-form {
+  display: flex;
+}
+.contact-form > h4 {
+  text-align: center;
+}
+.contact-heading {
+  width: auto;
+  align-self: center;
+  text-align: center;
+}
+ /* 見出しのラベル */
+.contact-label {
+  ont-weight: bold;
+  font-size: 30px;
+}
+/* 必須 */
+.contact-span {
+  color: #ce2222;
+  margin: 0 0 0 20px;
+  font-weight: bold;
+}
+  /* テキストボックス */
+.contact-textbox {
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom-width: 1px;
+  border-bottom-color: #707070;
+  border-style: solid;
+  background-color: #fafafa;
+  width: 400px;
+  height: 56px;
+  font-size: 30px;
+  text-align: center;
+}
+ /* お問い合わせ内容のテキストエリア */
+.contact-textarea {
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom-width: 1px;
+  border-bottom-color: #707070;
+  background-color: #fafafa;
+  width: 400px;
+  height: 200px;
+}
 
+/* contactここまで */
 
+  /*====================
+  スマートフォン用のスタイル
+  =====================*/
+  @media screen and (max-width: 767px) {
+   /* PC用ナビゲーション非表示 */
+    #nav-pc {
+      display: none;
+    }
+  }

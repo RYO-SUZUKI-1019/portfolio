@@ -51,7 +51,7 @@ small {
   justify-content: end;
 }
 
-/* index-home */
+/* index.html */
 /* header */
 .header {
   display: flex;
@@ -365,29 +365,47 @@ small {
 .contact-x, .contact-instagram {
   margin-top: 5px;
 }
-/* index-homeここまで */
+/* index.htmlここまで */
 
 
-/* contact */
+/* contact.html */
 .contact-form {
-  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
 }
-.contact-form > h4 {
+.contact-position {
   text-align: center;
+}
+.contact-taitl{
+  position: relative;
+  font-size: 60px;
+  color:   #f87841;
+}
+.contact-taitl::after {
+  position: absolute;
+  left: 210px;
+  content: "";
+  display: block;
+  width: 100px;
+  height: 2px;
+  background-color: #f87841;
+  top: 0;
+  bottom: 0;
+  margin: auto;
 }
 .contact-heading {
   width: auto;
-  align-self: center;
   text-align: center;
+  margin: -50px 0 -60px 0;
 }
  /* 見出しのラベル */
 .contact-label {
-  ont-weight: bold;
-  font-size: 30px;
+  font-size: 25px;
 }
 /* 必須 */
 .contact-span {
-  color: #ce2222;
+  color: rgb(255, 44, 44);
   margin: 0 0 0 20px;
   font-weight: bold;
 }
@@ -397,13 +415,12 @@ small {
   border-left: 0px;
   border-right: 0px;
   border-bottom-width: 1px;
-  border-bottom-color: #707070;
+  border-bottom-color: #f87841;
   border-style: solid;
   background-color: #fafafa;
   width: 400px;
-  height: 56px;
-  font-size: 30px;
-  text-align: center;
+  height: 50px;
+  font-size: 20px;
 }
  /* お問い合わせ内容のテキストエリア */
 .contact-textarea {
@@ -411,10 +428,13 @@ small {
   border-left: 0px;
   border-right: 0px;
   border-bottom-width: 1px;
-  border-bottom-color: #707070;
+  border-bottom-color: #f87841;
+  border-style: solid;
   background-color: #fafafa;
   width: 400px;
-  height: 200px;
+  height: 100px;
+  margin-top: 70px;
+  font-size: 20px;
 }
 
 /* contactここまで */
@@ -424,7 +444,4 @@ small {
   =====================*/
   @media screen and (max-width: 767px) {
    /* PC用ナビゲーション非表示 */
-    #nav-pc {
-      display: none;
-    }
   }

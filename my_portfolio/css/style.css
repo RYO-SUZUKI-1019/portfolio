@@ -199,13 +199,17 @@ small {
   object-fit: cover;
   display: inline-block;
 }
-.designer-banner, .doctor-banner{
+.works-line li {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   margin-top: 50px;
+}
+.works-line li:nth-child(2n) {
+  flex-direction: row-reverse;
+
 }
 .designer-works-text {
   padding-left: 23%;
@@ -216,14 +220,14 @@ small {
 .doctor-banner-text {
   padding-left: 20%;
 }
-.portfolio-works{
+/* .portfolio-works{
   display: flex;
   justify-content: center;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   margin-top: 50px;
-}
+} */
 .content-one{
   color: #383e45;
 }

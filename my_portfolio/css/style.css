@@ -19,12 +19,10 @@ body {
   display: none;
 }
 
+
 /* common */
 h1 {
   font-size: 25px;
-}
-ul{
-  display: flex;
 }
 li{
   list-style: none;
@@ -51,7 +49,8 @@ small {
   font-size: 20%;
   color: #f0f0f0;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
+  padding-right: 10px;
 }
 
 /* index.html */
@@ -61,7 +60,9 @@ small {
   position: sticky;
   top: 0;
   background-color: rgba(255, 255, 255, 0.7);
+  z-index: 9999;
 }
+
 .header-inner {
   display: flex;
   justify-content: space-between;
@@ -69,7 +70,9 @@ small {
   max-width: 1650px;
   min-width: 900px;
   margin: auto;
-
+}
+.header-inner ul {
+  display: flex;
 }
 .site-links {
   font-size: 25px;
@@ -199,7 +202,7 @@ small {
   object-fit: cover;
   display: inline-block;
 }
-.designer-banner, .doctor-banner{
+.works-line li {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -207,7 +210,10 @@ small {
   justify-content: center;
   margin-top: 50px;
 }
-.designer-works-text {
+.works-line li:nth-child(2n) {
+  flex-direction: row-reverse;
+}
+/* .designer-works-text {
   padding-left: 23%;
 }
 .portfolio-works-text {
@@ -215,15 +221,15 @@ small {
 }
 .doctor-banner-text {
   padding-left: 20%;
-}
-.portfolio-works{
+} */
+/* .portfolio-works{
   display: flex;
   justify-content: center;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   margin-top: 50px;
-}
+} */
 .content-one{
   color: #383e45;
 }
@@ -240,7 +246,6 @@ small {
   font-size: 15px;
   color: #383e45;
 }
-
 .works-link-detail::after {
   content: "";
   position: absolute;
@@ -249,6 +254,9 @@ small {
   width: 100%;
   height: 1px;
   background-color: #ff6b3d;
+}
+.works-link-detail:hover {
+  color: #ff6b3d;
 }
 .content-photo-two {
   width: 500px;
@@ -267,13 +275,6 @@ small {
 .soft-three {
   color: #a5a5a5;
   font-size: 20px;
-}
-.works-link {
-  color: #383e45;
-  display: inline-block;
-  line-height: 100px;
-  border-radius: 100%;
-  border: solid 2px #383e45;
 }
 
 /* profile */
@@ -308,12 +309,18 @@ small {
   line-height: 2em;
   text-align: justify;
 }
-.profile-link {
+.all-link {
   color: #383e45;
   display: inline-block;
   line-height: 100px;
   border-radius: 100%;
   border: solid 2px #383e45;
+}
+.all-link:hover {
+  color: #fff;
+  background-color: #ff6b3d;
+  text-decoration: none;
+  border: solid 2px #ff6b3d;
 }
 
 /* gallery */
@@ -321,6 +328,9 @@ small {
   background: linear-gradient(to right, #ff9f75, #f87841);
   padding-top: 20px;
   margin-top: 50px;
+}
+.gallery ul {
+  display: flex;
 }
 .left-scroll {
   margin: 5px;
@@ -338,6 +348,7 @@ small {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  padding-left: 20px;
 }
 .contact-name{
   color: #000;
@@ -363,6 +374,7 @@ small {
   height: 50px;
   text-align: center;
   line-height: 50px;
+  border-radius: 5px;
 }
 .contact-mail:hover {
   color: #fff;
@@ -375,6 +387,9 @@ small {
   width: 50%;
   width: 600px;
 }
+.contact ul {
+  display: flex;
+}
 .contact-link a {
   position: relative;
   top: -50px;
@@ -382,14 +397,16 @@ small {
 .contact-profile, .contact-works,.contact-x,.contact-instagram {
   margin-left: 20px;
 }
-.contact-home:hover {
-    text-decoration: underline;
-    color: #fafafa;
-}
 .x-icon {
   width: 50px;
   height: 50px;
 }
+/* .x-icon:hover {
+  content: url("images/x-hover.png");
+}
+.contact-instagram:hover {
+  content: url("images/instagram-hover.png");
+} */
 .instagram-icon {
   width: 50px;
   height: 50px;
@@ -397,6 +414,7 @@ small {
 .contact-x, .contact-instagram {
   margin-top: 5px;
 }
+
 /* index.htmlここまで */
 
 
@@ -472,6 +490,31 @@ small {
 }
 
 /* contactここまで */
+/* main-sp sp-maxが930pxの場合*/
+/* @media screen and (max-width: 1300px) {
+    .main-contents {
+      display: block;
+      justify-content: center;
+    }
+    .main-contents img {
+      display: block;
+      width: 800px;
+      height: 550px;
+      object-position: top;
+      object-fit: cover;
+    }
+    .main-title-text {
+      position: absolute;
+    }
+    .portfolio-title {
+      font-size: 130%;
+    }
+    .main-name, .main-actively {
+      color: #fff;
+      border-top: none;
+      border-bottom: none;
+    }
+} */
 
   /*====================
   スマートフォン用のスタイル
@@ -490,16 +533,16 @@ small {
       border: none;
       margin-top: -60px;
     }
-  .nav-sp {
-    background-color: #f87841;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    display: none;
-    z-index: 100;
-}
+    .nav-sp {
+      background-color: #f87841;
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      display: none;
+      z-index: 100;
+  }
     .close {
       position: absolute;
       margin-top: -50px;
@@ -514,7 +557,21 @@ small {
       list-style: none;
     }
     .logo-sp {
+      color: #fff;
       margin: 80px 0 30px 20px;
+      font-size: 35px;
+    }
+    .logo-sp::after {
+      position: absolute;
+      left: 190px;
+      content: "";
+      display: block;
+      width: 100px;
+      height: 2px;
+      background-color: #fff;
+      top: -76%;
+      bottom: 0;
+      margin: auto;
     }
     .nav-sp nav a {
       display: block;
@@ -525,12 +582,12 @@ small {
     }
     .nav-sp .menu {
       text-decoration: none;
-      margin: 0 20px 0 20px;
+      margin: 10px 20px 0 20px;
       height: 44px;
-      font-size: 16px;
+      font-size: 30px;
       background-image: url("images/arrow.png");
       background-repeat: no-repeat;
-      background-position: right top;
+      background-position: right center;
     }
 
     /* main-sp */
@@ -556,18 +613,25 @@ small {
     }
 
     /* works-sp */
-    .works-line {
+    .works-line li,
+    .works-line li:nth-child(2n) {
+      flex-direction: column;
       width: 100%;
       max-width: 500px;
-      margin: auto;
+      margin: 0 auto;
+      padding-top: 50px;
     }
+
+    /* profile-sp */
     .profile-main {
-      display: block;
       width: 100%;
       max-width: 500px;
-      margin: auto;
+      margin: 0 auto;
+      flex-direction: column-reverse;
     }
+
+    /* contact-sp */
     .contact {
-      margin-left: 15px;
+      padding-left: 20px;
     }
   }

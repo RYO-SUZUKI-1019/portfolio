@@ -1,108 +1,93 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Oswald&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-<!-- ヘッダー -->
-  <header class="header">
-    <div class="header-inner">
-      <h1 class="site-title">
-        <a class="top-links" href="index.html">SUZUKI RYO</a>
-      </h1>
-    <nav class="site-links">
-      <ul>
-        <li>
-          <a class="header-works-link" href="#works">Works</a>
-        </li>
-        <li>
-          <a class="header-profile-link" href="#profile">Profile</a>
-        </li>
-        <li>
-          <a class="header-contact-link" href="contact.html">Contact</a>
-        </li>
-        </ul>
-      </nav>
-    </div>
-    <!-- スマホハンバーガーメニュー -->
-    <button class="menu-sp" onclick="document.querySelector('.nav-sp').style.display = 'block'">
-      <img src="images/button-menu.png" alt="ナビゲーションを開く">
-    </button>
-    <div class="nav-sp">
-      <button class="close" onclick="document.querySelector('.nav-sp').style.display = 'none'">
-        <img src="images/button-close.png" alt="ナビゲーションを閉じる">
-      </button>
-    <nav>
-      <ul>
-        <li>
-          <a class="logo-sp" href="index.html" onclick="document.querySelector('.nav-sp').style.display = 'none'">SUZUKI RYO</a>
-        </li>
-        <li>
-          <a class="menu" href="#works" onclick="document.querySelector('.nav-sp').style.display = 'none'">Works</a>
-        </li>
-        <li>
-          <a class="menu" href="#profile" onclick="document.querySelector('.nav-sp').style.display = 'none'">Profile</a>
-        </li>
-        <li>
-          <a class="menu" href="contact.html" onclick="document.querySelector('.nav-sp').style.display = 'none'">Contact</a>
-        </li>
-      </ul>
-    </nav>
-    </div>
-  </header>
-<body>
-<!-- フッター -->
-    <footer>
-        <div class="contact" id="contact">
-            <h3 class="contact-text">
-                Contact
-            </h3>
-            <p class="contact-nema">
-                SUZUKI RYO
-            </p>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="header-inner">
+        <h1 class="site-title">
+            <a class="top-links" href="index.html">SUZUKI RYO</a>
+        </h1>
+        <nav class="site-links">
+        <ul>
+            <li>
+            <a class="header-works-link" href="#works">Works</a>
+            </li>
+            <li>
+            <a class="header-profile-link" href="#profile">Profile</a>
+            </li>
+            <li>
+            <a class="header-contact-link" href="contact.html">Contact</a>
+            </li>
+            </ul>
+        </nav>
         </div>
-        <a class="contact-mail" href="contact.html">
-            contactform
-        </a>
+        <!-- スマホハンバーガーメニュー -->
+        <button class="menu-sp" onclick="document.querySelector('.nav-sp').style.display = 'block'">
+        <img src="images/button-menu.png" alt="ナビゲーションを開く">
+        </button>
+        <div class="nav-sp">
+        <button class="close" onclick="document.querySelector('.nav-sp').style.display = 'none'">
+            <img src="images/button-close.png" alt="ナビゲーションを閉じる">
+        </button>
+        <nav>
+        <ul>
+            <li>
+            <a class="logo-sp" href="index.html" onclick="document.querySelector('.nav-sp').style.display = 'none'">SUZUKI RYO</a>
+            </li>
+            <li>
+            <a class="menu" href="#works" onclick="document.querySelector('.nav-sp').style.display = 'none'">Works</a>
+            </li>
+            <li>
+            <a class="menu" href="#profile" onclick="document.querySelector('.nav-sp').style.display = 'none'">Profile</a>
+            </li>
+            <li>
+            <a class="menu" href="contact.html" onclick="document.querySelector('.nav-sp').style.display = 'none'">Contact</a>
+            </li>
+        </ul>
+        </nav>
+        </div>
+    </header>
+    <body>
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="contact" id="contact">
+        <div class="contact-flex">
+            <h3 class="contact-text">Contact</h3>
+            <p class="contact-name">SUZUKI RYO</p>
+            <a class="contact-mail" href="contact.html">contactform</a>
+        </div>
     <nav class="contact-link">
         <ul>
-            <li class="contact-home">
-                <a href="index.html">
-                    Home
-                </a>
-            </li>
-            <li class="contact-Profile">
-                <a href="#profile">
-                    Profile
-                </a>
-            </li>
-            <li class="contact-Works">
-                <a href="#works">
-                    Works
-                </a>
-            </li>
-            <li class="contact-x">
-                <a href="https://x.com/evRw2BXcLJ2424">
-                    <img class="x-icon" src="" alt="X">
-                </a>
-            </li>
-            <li class="contact-instagram">
-                <a href="https://www.instagram.com/return_name/">
-                    <img class="instagram-icon" src="" alt="instagram">
-                </a>
-            </li>
+        <li class="contact-home">
+            <a href="index.html">Home</a>
+        </li>
+        <li class="contact-profile">
+            <a href="#profile">Profile</a>
+        </li>
+        <li class="contact-works">
+            <a href="#works">Works</a>
+        </li>
+        <li class="contact-x">
+            <a href="https://x.com/evRw2BXcLJ2424"><img class="x-icon" src="images/x_1.png" alt="X"></a>
+        </li>
+        <li class="contact-instagram">
+            <a href="https://www.instagram.com/return_name/"><img class="instagram-icon" src="images/instagram_1.png" alt="instagram"></a>
+        </li>
         </ul>
     </nav>
-        <small>
-            © 2026 Ryo Suzuki
-        </small>
+        <small>&copy; 2026 Ryo Suzuki</small>
+        </div>
     </footer>
-</body>
-</html>
+    </main>
+    </body>
+    </html>

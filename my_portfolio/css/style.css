@@ -53,6 +53,17 @@ small {
   padding-right: 10px;
 }
 
+#back-to-top {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 70px;
+    height: 70px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
 /* index.html */
 /* header */
 .header {
@@ -191,8 +202,6 @@ small {
   margin: 0 auto;
   margin-top: 160px;
 }
-.main-works-title {
-}
 .works-line{
   display: flex;
   flex-direction: column;
@@ -277,7 +286,7 @@ small {
 }
 .profile-text {
   display: flex;
-  font-size: 15px;
+  font-size: 20px;
   width: 462px;
   line-height: 2em;
   text-align: justify;
@@ -301,9 +310,18 @@ small {
   background: linear-gradient(to right, #ff9f75, #f87841);
   padding-top: 20px;
   margin-top: 50px;
+  overflow: hidden;
 }
 .gallery ul {
   display: flex;
+  width: max-content;
+  margin: 0;
+  padding: 0;
+  animation: left-scroll 60s linear infinite;
+}
+.gallery li {
+  list-style: none;
+  flex-shrink: 0;
 }
 .left-scroll {
   margin: 5px;
@@ -311,11 +329,67 @@ small {
   height: 200px;
   object-fit: cover;
 }
+@keyframes left-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* =========================
+   波
+========================= */
+
+.custom-shape-divider {
+  margin-top: 100px;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider svg {
+  display: block;
+  width: 100%;
+  height: 150px;
+}
+
+.wave-animation > use {
+  fill: #f87841;
+  animation: wave-move 15s cubic-bezier(.55,.5,.45,.5) infinite;
+}
+
+.wave-animation > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 15s;
+}
+
+.wave-animation > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10.5s;
+}
+
+.wave-animation > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 7.5s;
+}
+
+@keyframes wave-move {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
 
 /* footer */
 .footer {
   background: linear-gradient(#f87841, #ff9f75);
-  margin-top: 100px;
 }
 .contact {
   width: 100%;
@@ -387,6 +461,7 @@ small {
 .contact-x, .contact-instagram {
   margin-top: 5px;
 }
+
 
 /*----------------------
     index.htmlここまで
@@ -498,6 +573,9 @@ small {
 .skill-text {
   width: 800px;
 }
+.skill p {
+  font-size: 25px;
+}
 .table-item {
   width: 100%;
   display: flex;
@@ -506,14 +584,20 @@ small {
 }
 .skill-table {
   margin-top: 40px;
+  border-collapse: collapse;
 }
 .skill-table th,
 .skill-table td {
   padding: 0 10px;
-  border-bottom: 2px solid #000;
+  font-size: 25px;
+  border-bottom: 1px solid #000;
 }
 .skill-table th img {
   width: 100px;
+}
+.html-css-title span {
+  display: inline-block;
+  margin-top: 50px;
 }
 .profil-line {
   display: flex;
@@ -524,7 +608,50 @@ small {
   width: 350px;
   margin-left: 50px;
 }
+/* アコーディオン */
+.skill-accordion {
+  width: 100%;
+  text-align: center;
+}
+.skill-accordion .skill-table {
+  margin: 40px auto 0;
+}
+/* ▼ボタン */
+.skill-accordion summary {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  cursor: pointer;
+  list-style: none;
+}
+.skill-accordion summary::-webkit-details-marker {
+  display: none;
+}
+.skill-accordion summary::before {
+  content: "▼";
+  font-size: 25px;
+  display: block;
+  text-align: center;
+  transition: 0.3s;
+}
+.skill-accordion[open] summary::before {
+  transform: rotate(180deg);
+}
+.skill-accordion[open] .skill-table {
+  animation: skill-open 0.4s ease;
+}
+@keyframes skill-open {
 
+  from {
+      opacity: 0;
+      transform: translateY(-15px);
+    }
+
+  to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
 
   /*====================
   スマートフォン用のスタイル
@@ -595,9 +722,6 @@ small {
       margin: 10px 20px 0 20px;
       height: 44px;
       font-size: 30px;
-      background-image: url("images/arrow.png");
-      background-repeat: no-repeat;
-      background-position: right center;
     }
 
     /* main-sp */
@@ -644,4 +768,63 @@ small {
     .contact {
       padding-left: 20px;
     }
+    /* スマホ対応 */
+@media (max-width: 1000px) {
+	.custom-shape-divider svg {
+		height: 40px;
+	}
+}
   }
+
+/* -------------------------------------
+            profilehome-sp
+-----------------------------------------*/
+@media screen and (max-width: 1150px) {
+  .skill-img {
+    width: 300px;
+    margin: 0 auto;
+  }
+  .skill-text {
+    width: 90%;
+    margin: 30px auto 0;
+  }
+  .skill-text p {
+    text-align: center;
+  }
+  .table-item {
+    width: 100%;
+    margin: 40px 0 0;
+  }
+  .skill-table td {
+    display: block;
+  }
+  .skill-table {
+    width: 100%;
+  }
+  .skill-table tr {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  .skill-table tr > td {
+    width: 100%;
+    padding: 20px 20px 0;
+    line-height: 1.7;
+    text-align: center;
+  }
+  .skill-table tr > th:first-child {
+    margin-left: auto;
+  }
+  .skill-table tr > th:nth-child(2) {
+    margin-right: auto;
+  }
+    .skill-table tr > th {
+    border-bottom: none;
+  }
+  .profil-line {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

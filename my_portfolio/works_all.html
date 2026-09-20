@@ -127,50 +127,54 @@
     </nav>
     </main>
 <!-- フッター -->
-    <footer>
+<!-- 波 -->
+<div class="custom-shape-divider">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 25" preserveAspectRatio="none">
+    <defs>
+        <path id="wave-path"
+        d="M-160 44c30 0 58-18 88-18s58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+    </defs>
+    <g class="wave-animation" transform="translate(0, 48) scale(1, -1)">
+        <use xlink:href="#wave-path" x="48" y="0" />
+        <use xlink:href="#wave-path" x="48" y="3" opacity="0.5" />
+        <use xlink:href="#wave-path" x="48" y="5" opacity="0.3" />
+    </g>
+    </svg>
+</div>
+<footer class="footer">
     <div class="contact" id="contact">
-        <h3 class="contact-text">
-            Contact
-        </h3>
-    <p class="contact-nema">
-        SUZUKI RYO
-    </p>
+    <div class="contact-flex">
+        <h3 class="contact-text">Contact</h3>
+        <p class="contact-name">SUZUKI RYO</p>
+        <a class="contact-mail" href="contact.html">contactform</a>
     </div>
-        <a class="contact-mail" href="contact.html">
-        contactform
-    </a>
     <nav class="contact-link">
-    <ul>
+        <ul>
         <li class="contact-home">
-            <a href="index.html">
-                Home
-            </a>
+            <a href="index.html">Home</a>
         </li>
-        <li class="contact-Profile">
-            <a href="#profile">
-                Profile
-            </a>
+        <li class="contact-profile">
+            <a href="#profile">Profile</a>
         </li>
-        <li class="contact-Works">
-            <a href="#works">
-                Works
-            </a>
+        <li class="contact-works">
+            <a href="#works">Works</a>
         </li>
         <li class="contact-x">
             <a href="https://x.com/evRw2BXcLJ2424">
-                <img class="x-icon" src="" alt="X">
+            <img class="x-icon" src="images/x.png" alt="X">
             </a>
         </li>
         <li class="contact-instagram">
             <a href="https://www.instagram.com/return_name/">
-                <img class="instagram-icon" src="" alt="instagram">
+            <img class="instagram-icon" src="images/instagram.png" alt="instagram">
             </a>
         </li>
-    </ul>
+        </ul>
     </nav>
-        <small>
-            © 2026 Ryo Suzuki
-        </small>
-    </footer>
+    <small>&copy; 2026 Ryo Suzuki</small>
+    </div>
+</footer>
 </body>
+    <img id="back-to-top" src="images/circle-arrow-up-solid.png" alt="TOPページ移動">
+    <script src="js/main.js"></script>
 </html>

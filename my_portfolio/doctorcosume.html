@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- ヘッダー -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Oswald&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- ヘッダー -->
+<header class="header">
+    <div class="header-inner">
+        <h1 class="site-title">
+            <a class="top-links" href="index.html">SUZUKI RYO</a>
+        </h1>
+        <nav class="site-links">
+            <ul>
+                <li>
+                    <a class="header-works-link" href="index.html#works">Works</a>
+                </li>
+                <li>
+                    <a class="header-profile-link" href="index.html#profile">Profile</a>
+                </li>
+                <li>
+                    <a class="header-contact-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <!-- スマホハンバーガーメニュー -->
+    <button class="menu-sp" onclick="document.querySelector('.nav-sp').style.display = 'block'">
+        <img src="images/button-menu.png" alt="ナビゲーションを開く">
+    </button>
+    <div class="nav-sp">
+        <button class="close" onclick="document.querySelector('.nav-sp').style.display = 'none'">
+            <img src="images/button-close.png" alt="ナビゲーションを閉じる">
+        </button>
+        <nav>
+            <ul>
+                <li>
+                    <a class="logo-sp" href="index.html" onclick="document.querySelector('.nav-sp').style.display = 'none'">SUZUKI RYO</a>
+                </li>
+                <li>
+                    <a class="menu" href="#works" onclick="document.querySelector('.nav-sp').style.display = 'none'">Works</a>
+                </li>
+                <li>
+                    <a class="menu" href="index.html#profile" onclick="document.querySelector('.nav-sp').style.display = 'none'">Profile</a>
+                </li>
+                <li>
+                    <a class="menu" href="contact.html" onclick="document.querySelector('.nav-sp').style.display = 'none'">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+    <main>
+        <div class="wks">
+            <div>
+                <img class="wks-img" src="images/cosumebanner.png" alt="designbanner">
+            </div>
+            <div class="wks-text">
+                <p>架空のドクターズコスメブランドのECサイトにて、TOPページのファーストビュー<br>で使用するバナーデザインを制作しました。シンプルだけど高級感のあるデザイン<br>を目指しました。</p>
+            </div>
+            <table class="wks-explain">
+                <tr>
+                    <th>サイズ</th>
+                    <td>1920&times;820px</td>
+                </tr>
+                <tr>
+                    <th>ターゲット</th>
+                    <td>シワやたるみが気になる、安さより品質を<br>求める層30〜50代女性</td>
+                </tr>
+                <tr>
+                    <th>目的</th>
+                    <td>医療レベルのスキンケアを、上質で清潔感<br>のある印象で伝える</td>
+                </tr>
+                <tr>
+                    <th>デザインプロセス</th>
+                    <td>ドクターズコスメを想定したファーストビューを制作しました。ターゲットである30〜50代女性に向け、「信頼できる医療品質と高級感」をコンセプトに設計。<br>白とブルーを基調とした配色で清潔感と安心感を演出し、流れるウェーブによって商品へ視線誘導を行っています。<br>また、大理石背景やゴールドパーツを取り入れることでプレミアム感を強化しました。</td>
+                </tr>
+                <tr>
+                    <th>制作期間</th>
+                    <td>企画 約1時間<br>制作時間 約2時間</td>
+                </tr>
+                <tr>
+                    <th>使用ツール</th>
+                    <td>Photoshop</td>
+                </tr>
+            </table>
+        </div>
+        <div class="link-external">
+            <a class="all-link" href="works_list.html">一覧戻る</a>
+    </main>
+<!-- フッター -->
+<!-- 波 -->
+<div class="custom-shape-divider">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 25" preserveAspectRatio="none">
+    <defs>
+        <path id="wave-path"
+        d="M-160 44c30 0 58-18 88-18s58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+    </defs>
+    <g class="wave-animation" transform="translate(0, 48) scale(1, -1)">
+        <use xlink:href="#wave-path" x="48" y="0" />
+        <use xlink:href="#wave-path" x="48" y="3" opacity="0.5" />
+        <use xlink:href="#wave-path" x="48" y="5" opacity="0.3" />
+    </g>
+    </svg>
+</div>
+<footer class="footer">
+    <div class="contact" id="contact">
+        <div class="contact-flex">
+            <h3 class="contact-text">Contact</h3>
+            <p class="contact-name">SUZUKI RYO</p>
+            <a class="contact-mail" href="contact.html">contactform</a>
+        </div>
+            <nav class="contact-link">
+                <ul>
+                    <li class="contact-home">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li class="contact-profile">
+                        <a href="#profile">Profile</a>
+                    </li>
+                    <li class="contact-works">
+                        <a href="#works">Works</a>
+                    </li>
+                    <li class="contact-x">
+                        <a href="https://x.com/evRw2BXcLJ2424">
+                            <img class="x-normal" src="images/x.png" alt="x">
+                            <img class="x-hover" src="images/x-hover.png" alt="x-hover">
+                        </a>
+                    </li>
+                    <li class="contact-instagram">
+                        <a href="https://www.instagram.com/return_name/">
+                            <img class="instagram-normal" src="images/instagram.png" alt="instagram">
+                            <img class="instagram-hover" src="images/instagram-hover.png" alt="instagram-hover">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        <small>&copy; 2026 Ryo Suzuki</small>
+    </div>
+</footer>
+</body>
+    <img id="back-to-top" src="images/circle-arrow-up-solid.png" alt="TOPページ移動">
+    <script src="js/main.js"></script>
+</html>

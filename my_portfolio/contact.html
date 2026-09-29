@@ -14,83 +14,88 @@
 <!-- ヘッダー -->
     <header class="header">
         <div class="header-inner">
-            <h1 class="site-title">
-                <a class="top-links" href="index.html">SUZUKI RYO</a>
-            </h1>
+            <h1 class="site-title"><a class="top-links" href="index.html">SUZUKI RYO</a></h1>
             <nav class="site-links">
                 <ul>
-                    <li>
-                        <a class="header-works-link" href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a class="header-contact-link" href="contact.html">Contact</a>
-                    </li>
+                <li>
+                    <a class="header-works-link" href="index.html#works">Works</a>
+                </li>
+                <li>
+                    <a class="header-profile-link" href="index.html#profile">Profile</a>
+                </li>
+                <li>
+                    <a class="header-contact-link" href="contact.html">Contact</a>
+                </li>
                 </ul>
             </nav>
         </div>
-    <!-- スマホハンバーガーメニュー -->
-    <button class="menu-sp" onclick="document.querySelector('.nav-sp').style.display = 'block'">
-        <img src="images/button-menu.png" alt="ナビゲーションを開く">
-    </button>
-    <div class="nav-sp">
-        <button class="close" onclick="document.querySelector('.nav-sp').style.display = 'none'">
-        <img src="images/button-close.png" alt="ナビゲーションを閉じる">
+        <!-- スマホハンバーガーメニュー -->
+        <button class="menu-sp" onclick="document.querySelector('.nav-sp').style.display = 'block'">
+            <img src="images/button-menu.png" alt="ナビゲーションを開く">
         </button>
-    <nav>
-        <ul>
-        <li>
-            <a class="logo-sp" href="index.html" onclick="document.querySelector('.nav-sp').style.display = 'none'">SUZUKI RYO</a>
-        </li>
-        <li>
-            <a class="menu" href="index.html" onclick="document.querySelector('.nav-sp').style.display = 'none'">Home</a>
-        </li>
-        <li>
-            <a class="menu" href="contact.html" onclick="document.querySelector('.nav-sp').style.display = 'none'">Contact</a>
-        </li>
-        </ul>
-    </nav>
-    </div>
+        <div class="nav-sp">
+            <button class="close" onclick="document.querySelector('.nav-sp').style.display = 'none'">
+                <img src="images/button-close.png" alt="ナビゲーションを閉じる">
+            </button>
+            <nav>
+                <ul>
+                <li>
+                    <p class="logo-sp">SUZUKI RYO</p>
+                </li>
+                <li>
+                    <a class="menu" href="index.html#works" onclick="document.querySelector('.nav-sp').style.display = 'none'">Works</a>
+                </li>
+                <li>
+                    <a class="menu" href="index.html#profile" onclick="document.querySelector('.nav-sp').style.display = 'none'">Profile</a>
+                </li>
+                <li>
+                    <a class="menu" href="contact.html" onclick="document.querySelector('.nav-sp').style.display = 'none'">Contact</a>
+                </li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <!-- ヘッダーここまで -->
     <main>
         <section class="contact-form">
             <h3 class="contact-taitl">CONTACT</h3>
-            <foem>
-        <div class="contact-position">
-            <div>
-            <div class="contact-heading">
-                <label class="contact-label">お名前<span class="contact-span">必須</span></label>
-            </div>
-            <div>
-                <input type="text" name="name" placeholder="入力してください" class="contact-textbox">
-            </div>
-            </div>
-            <div>
-            <div class="contact-heading">
-                <label class="contact-label">フリガナ<span class="contact-span">必須</span></label>
-            </div>
-            <div>
-                <input type="text" name="hurigana" placeholder="入力してください" class="contact-textbox">
-            </div>
-            </div>
-            <div>
-            <div class="contact-heading">
-                <label class="contact-label">メールアドレス<span class="contact-span">必須</span></label>
-            </div>
-            <div>
-                <input type="text" name="email" placeholder="入力してください" class="contact-textbox">
-            </div>
-            <div>
-            <div class="contact-heading">
-                <label class="contact-label">お問い合わせ内容<span class="contact-span">必須</span></label>
-            </div>
+        <foem>
+            <div class="contact-position">
                 <div>
-                    <textarea class="contact-textarea" placeholder="入力してください" name="message"></textarea>
+                    <div class="contact-heading">
+                        <label class="contact-label">お名前<span class="contact-span">必須</span></label>
+                    </div>
+                    <div>
+                        <input type="text" name="name" placeholder="入力してください" class="contact-textbox">
+                    </div>
+                    </div>
+                    <div>
+                        <div class="contact-heading">
+                            <label class="contact-label">フリガナ<span class="contact-span">必須</span></label>
+                        </div>
+                        <div>
+                            <input type="text" name="hurigana" placeholder="入力してください" class="contact-textbox">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="contact-heading">
+                            <label class="contact-label">メールアドレス<span class="contact-span">必須</span></label>
+                        </div>
+                        <div>
+                            <input type="text" name="email" placeholder="入力してください" class="contact-textbox">
+                        </div>
+                    <div>
+                        <div class="contact-heading">
+                            <label class="contact-label">お問い合わせ内容<span class="contact-span">必須</span></label>
+                        </div>
+                        <div>
+                            <textarea class="contact-textarea" placeholder="入力してください" name="message"></textarea>
+                        </div>
+                    </div>
                 </div>
             </div>
-            </div>
-            </div>
-            </foem>
+                <button type="submit" class="submit-btn">送信する<span>→</span></button>
+        </foem>
         </section>
 <!-- フッター -->
 <!-- 波 -->
@@ -109,35 +114,37 @@
 </div>
 <footer class="footer">
     <div class="contact" id="contact">
-    <div class="contact-flex">
-        <h3 class="contact-text">Contact</h3>
-        <p class="contact-name">SUZUKI RYO</p>
-        <a class="contact-mail" href="contact.html">contactform</a>
-    </div>
-    <nav class="contact-link">
-        <ul>
-        <li class="contact-home">
-            <a href="index.html">Home</a>
-        </li>
-        <li class="contact-profile">
-            <a href="#profile">Profile</a>
-        </li>
-        <li class="contact-works">
-            <a href="#works">Works</a>
-        </li>
-        <li class="contact-x">
-            <a href="https://x.com/evRw2BXcLJ2424">
-            <img class="x-icon" src="images/x.png" alt="X">
-            </a>
-        </li>
-        <li class="contact-instagram">
-            <a href="https://www.instagram.com/return_name/">
-            <img class="instagram-icon" src="images/instagram.png" alt="instagram">
-            </a>
-        </li>
-        </ul>
-    </nav>
-    <small>&copy; 2026 Ryo Suzuki</small>
+        <div class="contact-flex">
+            <h3 class="contact-text">Contact</h3>
+            <p class="contact-name">SUZUKI RYO</p>
+            <a class="contact-mail" href="contact.html">contactform</a>
+        </div>
+            <nav class="contact-link">
+                <ul>
+                    <li class="contact-home">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li class="contact-profile">
+                        <a href="#profile">Profile</a>
+                    </li>
+                    <li class="contact-works">
+                        <a href="#works">Works</a>
+                    </li>
+                    <li class="contact-x">
+                        <a href="https://x.com/evRw2BXcLJ2424">
+                        <img class="x-normal" src="images/x.png" alt="x">
+                        <img class="x-hover" src="images/x-hover.png" alt="x-hover">
+                        </a>
+                    </li>
+                    <li class="contact-instagram">
+                        <a href="https://www.instagram.com/return_name/">
+                        <img class="instagram-normal" src="images/instagram.png" alt="instagram">
+                        <img class="instagram-hover" src="images/instagram-hover.png" alt="instagram-hover">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        <small>&copy; 2026 Ryo Suzuki</small>
     </div>
 </footer>
     <!-- フッターここまで -->

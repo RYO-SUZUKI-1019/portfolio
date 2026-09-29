@@ -62,7 +62,12 @@ small {
     border: none;
     border-radius: 50%;
     cursor: pointer;
+    background-color: #fff;
 }
+#back-to-top:hover {
+  transform: translateY(-5px);
+}
+
 
 /* index.html */
 /* header */
@@ -73,7 +78,6 @@ small {
   background-color: rgba(255, 255, 255, 0.7);
   z-index: 9999;
 }
-
 .header-inner {
   display: flex;
   justify-content: space-between;
@@ -398,7 +402,7 @@ small {
   padding-left: 20px;
 }
 .contact-name{
-  color: #000;
+  color: #fff;
 }
 .contact-name {
   font-size: 30px;
@@ -424,17 +428,16 @@ small {
   border-radius: 5px;
 }
 .contact-mail:hover {
-  color: #fff;
-  background-color: #4e4d4d;
+  color: #f87841;
+  background-color: #242424;
 }
 .contact-link {
   margin-top: 50px;
-  position: relative;
   border-top: dotted 3px #fff;
   width: 50%;
-  width: 600px;
 }
 .contact ul {
+  width: auto;
   display: flex;
 }
 .contact-link a {
@@ -444,29 +447,50 @@ small {
 .contact-profile, .contact-works,.contact-x,.contact-instagram {
   margin-left: 20px;
 }
-.x-icon {
+.x-normal {
   width: 50px;
   height: 50px;
 }
-/* .x-icon:hover {
-  content: url("images/x-hover.png");
-}
-.contact-instagram:hover {
-  content: url("images/instagram-hover.png");
-} */
-.instagram-icon {
+.instagram-normal {
   width: 50px;
   height: 50px;
 }
 .contact-x, .contact-instagram {
-  margin-top: 5px;
+  margin-top: 75px;
 }
-
+.contact-x a,
+.contact-instagram a {
+    position: relative;
+    display: block;
+}
+.x-hover,
+.instagram-hover {
+    height: 50px;
+    transition: opacity 0.3s ease;
+}
+.x-hover,
+.instagram-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+.contact-x a:hover .x-normal {
+    opacity: 0;
+}
+.contact-x a:hover .x-hover {
+    opacity: 1;
+}
+.contact-instagram a:hover .instagram-normal {
+    opacity: 0;
+}
+.contact-instagram a:hover .instagram-hover {
+    opacity: 1;
+}
 
 /*----------------------
     index.htmlここまで
 ----------------------*/
-
 
 /* contact.html */
 .contact-form {
@@ -500,18 +524,15 @@ small {
   width: auto;
   margin: -50px 0 -60px 0;
 }
- /* 見出しのラベル */
 .contact-label {
   font-size: 25px;
 }
-/* 必須 */
 .contact-span {
   color: rgb(255, 44, 44);
   margin: 0 0 0 20px;
   font-weight: bold;
   font-size: 20px;
 }
-  /* テキストボックス */
 .contact-textbox {
   border-top: 0px;
   border-left: 0px;
@@ -537,6 +558,33 @@ small {
   height: 300px;
   margin-top: 70px;
   font-size: 20px;
+}
+.submit-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 220px;
+  padding: 15px 0;
+  margin: 40px auto 0;
+  background: #f87841;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.submit-btn span {
+  transition: transform 0.3s;
+}
+.submit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+.submit-btn:hover span {
+  transform: translateX(6px);
 }
 
 /*-------------------
@@ -628,11 +676,12 @@ small {
   display: none;
 }
 .skill-accordion summary::before {
-  content: "▼";
-  font-size: 25px;
+  content: "▲";
+  font-size: 50px;
   display: block;
   text-align: center;
   transition: 0.3s;
+  color: #f87841;
 }
 .skill-accordion[open] summary::before {
   transform: rotate(180deg);
@@ -641,17 +690,130 @@ small {
   animation: skill-open 0.4s ease;
 }
 @keyframes skill-open {
-
   from {
       opacity: 0;
       transform: translateY(-15px);
     }
-
   to {
       opacity: 1;
       transform: translateY(0);
     }
 }
+
+  /*====================
+      works-list.css
+  =====================*/
+.sidebar {
+    width: 150px;
+    flex-shrink: 0;
+    font-size: 0px;
+}
+.sidebar a {
+  font-size: 20px;
+  color: #000;
+}
+.sidebar a:hover {
+  color: #f87841;
+  text-decoration: none;
+  border-bottom: 2px solid #f87841;
+}
+.sidebar li {
+  padding-bottom: 15px;
+}
+.sidebar .side-banner-point {
+  border-bottom: 2px solid #f87841;
+}
+.sidebar .side-web-point {
+  border-bottom: 2px solid #f87841;
+}
+.sidebar .side-all-point {
+  border-bottom: 2px solid #f87841;
+}
+.sidebar .side-others-point {
+  border-bottom: 2px solid #f87841;
+}
+.works-detail {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    padding: 80px 30px;
+}
+.works-list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 60px;
+    row-gap: 60px;
+}
+.works-list img {
+  width: 500px;
+  height: 250px;
+  object-fit: cover;
+  display: inline-block;
+  border: 1px solid #000;
+}
+.works-list p {
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 20px;
+}
+.works-list p:last-child {
+    font-size: 15px;
+    color: #a5a5a5;
+}
+.works-list a:hover img {
+    opacity: 0.75;
+}
+
+
+  /*====================
+      ワークス詳細サイト
+  =====================*/
+.wks {
+    width: 100%;
+    margin-top: -60px;
+}
+.wks-img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    border: 1px solid #000;
+}
+.wks-text {
+    width: 100%;
+    margin: 55px auto 45px;
+    display: flex;
+    justify-content: center;
+}
+.wks-text p {
+    font-size: 18px;
+}
+.wks-explain {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+.wks-explain tr {
+    border-top: 1px solid #000;
+}
+.wks-explain tr:last-child {
+    border-bottom: 1px solid #000;
+}
+.wks-explain th {
+    width: 200px;
+    padding: 24px 10px;
+    text-align: left;
+    vertical-align: top;
+    font-size: 18px;
+    font-weight: bold;
+}
+.wks-explain td {
+    padding: 24px 0;
+    font-size: 18px;
+}
+
 
   /*====================
   スマートフォン用のスタイル
@@ -774,7 +936,8 @@ small {
 		height: 40px;
 	}
 }
-  }
+
+}
 
 /* -------------------------------------
             profilehome-sp
@@ -826,5 +989,26 @@ small {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+  }
+}
+
+    /*====================
+        workslist-sp
+  =====================*/
+@media screen and (max-width: 1330px) {
+  .works-detail {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .sidebar {
+    display: flex;
+    justify-content: center;
+  }
+  .works-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center
   }
 }

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- ヘッダー -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Oswald&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- ヘッダー -->
+<header class="header">
+    <div class="header-inner">
+        <h1 class="site-title">
+            <a class="top-links" href="index.html">SUZUKI RYO</a>
+        </h1>
+        <nav class="site-links">
+            <ul>
+                <li>
+                    <a class="header-works-link" href="index.html#works">Works</a>
+                </li>
+                <li>
+                    <a class="header-profile-link" href="index.html#profile">Profile</a>
+                </li>
+                <li>
+                    <a class="header-contact-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <!-- スマホハンバーガーメニュー -->
+    <button class="menu-sp" onclick="document.querySelector('.nav-sp').style.display = 'block'">
+        <img src="images/button-menu.png" alt="ナビゲーションを開く">
+    </button>
+    <div class="nav-sp">
+        <button class="close" onclick="document.querySelector('.nav-sp').style.display = 'none'">
+            <img src="images/button-close.png" alt="ナビゲーションを閉じる">
+        </button>
+        <nav>
+            <ul>
+                <li>
+                    <a class="logo-sp" href="index.html" onclick="document.querySelector('.nav-sp').style.display = 'none'">SUZUKI RYO</a>
+                </li>
+                <li>
+                    <a class="menu" href="#works" onclick="document.querySelector('.nav-sp').style.display = 'none'">Works</a>
+                </li>
+                <li>
+                    <a class="menu" href="index.html#profile" onclick="document.querySelector('.nav-sp').style.display = 'none'">Profile</a>
+                </li>
+                <li>
+                    <a class="menu" href="contact.html" onclick="document.querySelector('.nav-sp').style.display = 'none'">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+    <main>
+        <div class="works-detail">
+            <nav class="sidebar">
+                <ul>
+                    <li>
+                        <a class="side-all-point" href="works_list.html">すべて</a>
+                    </li>
+                    <li>
+                        <a class="side-web" href="works_website.html">webサイト</a>
+                    </li>
+                    <li>
+                        <a class="side-banner" href="works_banner.html">バナー</a>
+                    </li>
+                    <li>
+                        <a class="side-others" href="works_others.html">その他</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="list">
+                <div class="works-list">
+                    <div>
+                        <a href="designerbanner.html">
+                            <img class="works-img" src="images/designerbanner.png" alt="designbanner">
+                            <p>デザイナーバナー</p>
+                            <p>Photoshop / Figma</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="portfolio.html">
+                            <img class="works-img" src="images/portfolio.png" alt="portfolio">
+                            <p>Portfolio Site</p>
+                            <p>Photoshop / Visual Studio Code / Word press / Chat GPT</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="doctorcosume.html">
+                            <img class="works-img" src="images/cosumebanner.png" alt="doctorcosume">
+                            <p>ドクターコスメ</p>
+                            <p>Photoshop</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="">
+                            <img class="works-img" src="images/test.png" alt="てすと">
+                            <p></p>
+                            <p></p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="">
+                            <img class="works-img" src="images/test.png" alt="てすと">
+                            <p></p>
+                            <p></p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="">
+                            <img class="works-img" src="images/test.png" alt="てすと">
+                            <p></p>
+                            <p></p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="">
+                            <img class="works-img" src="images/test.png" alt="てすと">
+                            <p></p>
+                            <p></p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="">
+                            <img class="works-img" src="images/test.png" alt="てすと">
+                            <p></p>
+                            <p></p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+<!-- フッター -->
+<!-- 波 -->
+<div class="custom-shape-divider">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 25" preserveAspectRatio="none">
+    <defs>
+        <path id="wave-path"
+        d="M-160 44c30 0 58-18 88-18s58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+    </defs>
+    <g class="wave-animation" transform="translate(0, 48) scale(1, -1)">
+        <use xlink:href="#wave-path" x="48" y="0" />
+        <use xlink:href="#wave-path" x="48" y="3" opacity="0.5" />
+        <use xlink:href="#wave-path" x="48" y="5" opacity="0.3" />
+    </g>
+    </svg>
+</div>
+<footer class="footer">
+    <div class="contact" id="contact">
+        <div class="contact-flex">
+            <h3 class="contact-text">Contact</h3>
+            <p class="contact-name">SUZUKI RYO</p>
+            <a class="contact-mail" href="contact.html">contactform</a>
+        </div>
+            <nav class="contact-link">
+                <ul>
+                    <li class="contact-home">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li class="contact-profile">
+                        <a href="#profile">Profile</a>
+                    </li>
+                    <li class="contact-works">
+                        <a href="#works">Works</a>
+                    </li>
+                    <li class="contact-x">
+                        <a href="https://x.com/evRw2BXcLJ2424">
+                        <img class="x-normal" src="images/x.png" alt="x">
+                        <img class="x-hover" src="images/x-hover.png" alt="x-hover">
+                    </a>
+                    </li>
+                    <li class="contact-instagram">
+                        <a href="https://www.instagram.com/return_name/">
+                        <img class="instagram-normal" src="images/instagram.png" alt="instagram">
+                        <img class="instagram-hover" src="images/instagram-hover.png" alt="instagram-hover">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        <small>&copy; 2026 Ryo Suzuki</small>
+    </div>
+</footer>
+</body>
+    <img id="back-to-top" src="images/circle-arrow-up-solid.png" alt="TOPページ移動">
+    <script src="js/main.js"></script>
+</html>

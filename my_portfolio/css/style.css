@@ -101,33 +101,19 @@ small {
   text-decoration: underline;
   color: #383e45;
 }
-.header-works-link {
+.header-link {
   text-decoration: none;
   margin-right: 20px;
   color: #383e45;
 }
-.header-works-link:hover {
+.header-link:hover {
   text-decoration: underline;
   color: #f87841;
 }
-.header-profile-link {
-  text-decoration: none;
-  margin-right: 20px;
-  color: #383e45;
-}
-.header-profile-link:hover {
-  text-decoration: underline;
+.site-title {
   color: #f87841;
 }
-.header-contact-link {
-  text-decoration: none;
-  margin-right: 100px;
-  color: #383e45;
-}
-.header-contact-link:hover {
-  text-decoration: underline;
-  color: #f87841;
-}
+
 
 /* main */
 .section-title {
@@ -231,6 +217,12 @@ small {
 .content-one{
   color: #383e45;
 }
+.content-imgs {
+  transition: transform .6s ease;
+}
+.content-imgs:hover {
+  transform: scale(1.1);
+}
 .soft-one {
   color: #a5a5a5;
   font-size: 20px;
@@ -263,6 +255,17 @@ small {
 .soft-three {
   color: #a5a5a5;
   font-size: 20px;
+}
+.scroll-fade {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* 画面に入ったら表示 */
+.scroll-fade.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* profile */
@@ -301,12 +304,14 @@ small {
   line-height: 100px;
   border-radius: 100%;
   border: solid 2px #383e45;
+  transition: transform .6s ease;
 }
 .all-link:hover {
   color: #fff;
   background-color: #ff6b3d;
   text-decoration: none;
   border: solid 2px #ff6b3d;
+  transform: scale(1.1);
 }
 
 /* gallery */
@@ -443,6 +448,10 @@ small {
 .contact-link a {
   position: relative;
   top: -50px;
+  text-decoration: none;
+}
+.contact-link a:hover {
+  color: #fff;
 }
 .contact-profile, .contact-works,.contact-x,.contact-instagram {
   margin-left: 20px;
@@ -720,17 +729,9 @@ small {
 .sidebar li {
   padding-bottom: 15px;
 }
-.sidebar .side-banner-point {
-  border-bottom: 2px solid #f87841;
-}
-.sidebar .side-web-point {
-  border-bottom: 2px solid #f87841;
-}
-.sidebar .side-all-point {
-  border-bottom: 2px solid #f87841;
-}
-.sidebar .side-others-point {
-  border-bottom: 2px solid #f87841;
+.filter-btn.active {
+    color: #f87841;
+    border-bottom: 2px solid #f87841;
 }
 .works-detail {
     width: 100%;
@@ -764,6 +765,12 @@ small {
 }
 .works-list a:hover img {
     opacity: 0.75;
+}
+.works-img {
+  transition: transform .6s ease;
+}
+.works-img:hover {
+  transform: scale(1.1);
 }
 
 
